@@ -1,18 +1,13 @@
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-# Get user input
-try:
-    number = int(input("Enter a number: "))
+ 
+num = int(input("Enter a number: "))
+prime = True
+for i in range(2, num):
+    if num % i == 0:
+        prime = False
+        break
+if prime:
+    print("Number is Prime") 
+else:
+    print("Number is Not Prime")
     
-    if is_prime(number):
-        print(f"{number} is a prime number.")
-    else:
-        print(f"{number} is not a prime number.")
-except ValueError:
-    print("Please enter a valid integer.")
+   
