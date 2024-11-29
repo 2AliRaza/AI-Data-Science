@@ -6,3 +6,4 @@ for num in range(2, 51):
             break
     if prime:
         print(num)
+ 
